@@ -1,10 +1,11 @@
-    const images = ['stainless-steel-details-equipments-machinery.jpg','Screenshot.png','production-process-details.jpg','istockphoto-1139874304-612x612.jpg']; // Add more image URLs as needed
+    const images = ['stainless-steel-details-equipments-machinery.jpg','fstnr.png','production-process-details.jpg','istockphoto-1139874304-612x612.jpg']; // Add more image URLs as needed
     const pageHeader = document.querySelector('.page-header');
     let currentImage = 0;
     
     function changeBackground() {
         pageHeader.style.backgroundImage = `url(${images[currentImage]})`;
-        currentImage = (currentImage + 1) % images.length; 
+        currentImage = (currentImage + 1) % images.length;
+        pageHeader.style.transition = ' 1s ease-in'; 
     }
     
     setInterval(changeBackground, 5000); // Change image every 5 seconds (adjust as needed)
@@ -13,6 +14,7 @@
     let slideIndex = 0;
 showSlides();
 
+// 
 function showSlides() {
   let i;
   const brandCardContainers = document.querySelectorAll('.brand-card-container');
@@ -32,4 +34,16 @@ function showSlides() {
   setTimeout(showSlides, 3000); // Change slide every 5 seconds (adjust as needed)
 }
 
+
+
+hamburger = document.querySelector(".hamburger");
+nav = document.querySelector("nav");
+hamburger.onclick = function() {
+    nav.classList.toggle("active");
+}
+
+
+
+
+console.log(hamburger);
     

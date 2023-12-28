@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/logo solo.png">
+    <link rel="icon" href="assets/fav icon.png">
     <link rel="stylesheet" href="styles.css">
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,16 +21,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>ESS ESS Malik Ind.- Manufacturer & supplier of Tractor Parts </title>
+    <title>About - ESS ESS Malik Industries </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,500;1,700&display=swap" rel="stylesheet">
     <style>
     
-    body{
-        margin-top: 9em;
-    }
-        
+     
     .about-page {
             display: flex;
             align-items: center;
@@ -43,6 +40,11 @@
 
     }
 
+    .about-page p{
+        font-size: 20px;
+
+    }
+
     .about-page img{
         width: 50vw;
         height: 50vh;
@@ -52,7 +54,7 @@
 
 
     h1{
-        margin-top: 2.8em;
+        margin-top: 1em;
         text-align: center;
         justify-content:center ;
     }
@@ -93,72 +95,197 @@
     margin: 120px auto; /* Center the card horizontally */
     border: 1px solid #ccc;
     overflow: hidden; /* Clear the floats */
+    display: flex;
     }
 
-    .card-content-ceo {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center the content vertically */
+    #sm{
+        text-align: start;
     }
 
-    .card-text-ceo {
-    flex: 1; /* Take up remaining space in flex container */
-    padding: 20px;
+    .card-content-ceo{
+        width: 80%;
+        padding: 0 50px;
     }
 
-    .card-image-ceo {
-    flex: 1; /* Take up remaining space in flex container */
-    text-align: right;
+    .ceo-img{
+     background-image: url(assets/sunilmalik.jpg);
+     background-size: cover;
+     height: 500px;
+     width: 400px;
+
+    }
+    
+    .card-content-ceo p{
+       letter-spacing: 1.5px;
     }
 
-    .card-image-ceo img {
-    max-width: 100%;
-    height: auto;
+    .quote {
+    line-height: 1.4em;
+    font-size: 26px;
 }
+
+.quote {
+    position: relative;
+    letter-spacing: .03em;
+    margin-bottom: .5rem;
+    
+    &::before {
+        content: "“";
+        position: absolute;
+        left: -.7em;
+    }
+    
+    &:after {
+        content: "”";
+        margin-right: -1rem;
+    }
+}
+
+.quote--container {
+    margin: 4.5rem auto 0;
+    width: 30em;
+    /* border-bottom: 2px dotted #C6D1BF; */
+    padding-bottom: .5rem;
+}
+
+.quote--highlight {
+    color: #D24335;
+}
+
+.quote--author {
+    font-family: 'Open Sans Condensed';
+    font-size: 1.2rem;
+    text-align: right;
+    font-weight: 300;
+}
+
+
+
+
+/* responsive */
+@media screen and (max-width: 768px){
+.about-page {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .text-about{
+        padding: 10vw;
+    }
+
+    /* .about-page>img{
+        width: 250px;
+        height: 200px;
+    } */
+
+    .about-page {
+        display: flex;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+}
+
+.card-ceo{
+    margin-top: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+    margin: 0 0 0 20px;
+}
+
+.quote {
+    line-height: 1.4em;
+    font-size: 22px;
+}
+
+.quote--container {
+    margin: 4.5rem auto 0;
+    width: 15em;
+    /* border-bottom: 2px dotted #C6D1BF; */
+    padding-bottom: .5rem;
+}
+.about-page h2{
+    font-size: 24px;
+
+}
+
+.about-page img{
+    width: 60vw;
+    height: 30vh;
+    margin-right: 2vw;
+}
+
+.text-about>p{
+    font-size: 16px;
+    opacity: .8;
+}
+
+hr{
+    display: flex;
+    margin-top: 0;
+}
+
+}
+
+       
       
         
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <!-- Add this button inside your .container div, before the ul.menu -->
-        <button class="toggle-menu">&#9776; Menu</button>
-            <div class="logo">          
-                <a href="index.html"><img src="/Untitled design (1).png" alt=""></a>
+    <header class="one">
+        <div class="header-left">
+            <div class="logo">
+                <img src="assets/main logo.png" alt="">
             </div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="/about.html">About us</a></li>
-                <li><a href="/quality.html">Quality</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Products</a>
-                    <i class="fa-solid fa-caret-down fa-xs" style="color: black;"></i>
-                    <div class="dropdown-content">
-                      <a href="hitchpins.html">Pins and Hooks</a> <hr>
-                      <a href="toplinks.html">Top Link Assembly </a> <hr>
-                      <a href="/r-pins.html"> R-Pins &amp; clevis Pins </a> <hr>
-                      <a href="#">Hitch Pins</a> <hr>
-                      <a href="#">Linch Pins</a> <hr>
-                      <a href="slide.html">Nuts and Bolts</a> <hr>
-                      <a href="fasteners.html">Anchor Fasteners</a>
-                    </div>
-                  </li>
-                <li><a href="/contact.html">Contact Us</a></li>
-            </ul>
-            <div class="cta">
-                <a href="/contact.html" class="cta-button">Enquiry</a> 
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="quality.html">Quality</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Products</a>
+                        <i class="fa-solid fa-caret-down fa-xs" style="color: black;"></i>
+                        <div class="dropdown-content">
+                            <a href="fasteners.html">Fasteners</a> <hr>
+                            <a href="cnccomponents.html">CNC Components </a> <hr>
+                            <a href="trailer&towingparts.html"> Trailer &amp; Towing Parts </a> <hr>
+                            <a href="scaffolding.html">Scaffolding</a> <hr>
+                            <a href="tractor-linkage-parts.html">Tractor &amp; Linkage Parts</a> <hr>
+                            <a href="wireformedpdr.html">Wire Formed Products</a> <hr>
+                        </div>
+                      </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="cta">
+                    <a href="contact.html" class="cta-button">Enquiry</a> 
+                </div>
+            </nav>
+        </div>
+        <div class="header-right">
+              <div class="cta">
+                <a href="contact.html" class="cta-button">Enquiry</a> 
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
-    </nav> 
+    </header>
+
+
     <h1>About company</h1> <hr style="width:200px; height: 3px; background-color: #1E306E;"> 
 
 
 <div class="about-page">
-    <img src="/assets/handshake1.png" alt="">
+    <img src="assets/handshake1.png" alt=" Quality Manufacturing ">
     <div class="text-about">
     <h2>With a legacy of over three decades, </h2>
-    <p style="font-size: 20px;">ESS ESS Malik Industries stands as a cornerstone in the realm of manufacturing and supplying exceptional tractor accessories from 1998 We always support to work hard to provide the best and efficient offer for these kinds of quality products always. 
+    <p>ESS ESS Malik Industries stands as a cornerstone in the realm of manufacturing and supplying exceptional tractor accessories from 1998 We always support to work hard to provide the best and efficient offer for these kinds of quality products always. 
         <br> <br>We are the foremost and skilled manufacturer and supplier of the given quality product lines and we always offer the best for this to the widespread range of our honored clients. We always offer our client's the best product line to fulfill their entire needs and demands as per their full necessities and under their budget line also.</p>
     </div>
 </div>
@@ -168,7 +295,7 @@
 <div class="card-container-5" data-aos="fade-up" data-aos-duration="1500">
     <div class="card-5">
         <div class="card-image" style="justify-content: center;">
-            <img src="/assets/environment.png" alt="card image" style="text-align: center; margin-left: 80px; margin-bottom: 0px;
+            <img src="assets/environment.png" alt="card image" style="text-align: center; margin-left: 80px; margin-bottom: 0px;
 max-width: 100%;
     height: auto;
     border-radius: 5px;">
@@ -184,7 +311,7 @@ max-width: 100%;
     <hr style="margin-top: 70px;">
     <div class="card-5">
         <div class="card-image">
-            <img src="/assets/teamwork.png" alt="card image" style="text-align: center; margin-left: 60px;
+            <img src="assets/teamwork.png" alt="card image" style="text-align: center; margin-left: 60px;
             margin-bottom: 10px; max-width: 70%;
     height: auto;
     border-radius: 5px;">
@@ -197,7 +324,7 @@ max-width: 100%;
     <hr style="margin-top: 70px;">
     <div class="card-5">
         <div class="card-image">
-            <img src="/assets/industry.png" alt="card image" style="text-align: center; margin-left: 60px;
+            <img src="assets/industry.png" alt="card image" style="text-align: center; margin-left: 60px;
             margin-bottom: 10px;max-width: 80%;
     height: auto;
     border-radius: 5px;">
@@ -215,66 +342,81 @@ max-width: 100%;
 
 <div class="card-ceo">
     <div class="card-content-ceo">
-        <div class="card-text-ceo">
-            <h1 style="margin-top: 0rem;">Sunil Malik</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae veritatis cupiditate debitis blanditiis omnis mollitia, delectus nam esse! Ullam molestiae impedit accusantium eaque dolorum fugiat corrupti illo et saepe ex amet totam, perferendis placeat cumque iure soluta dolor pariatur qui aspernatur! Sit quas id quo saepe, distinctio sequi dolorum velit totam dicta iste exercitationem esse, enim deserunt fugiat! Quibusdam, ex. Recusandae provident aut unde obcaecati aperiam deserunt eius odio ex laudantium ea hic voluptate nesciunt ratione placeat accusamus ut eaque dolores inventore dolorum temporibus tempore, animi suscipit! Nemo obcaecati cupiditate facilis laborum repudiandae assumenda nam impedit nesciunt libero, a dolor. Ipsum, optio esse veniam numquam id dolores nihil, ad minima facere laudantium eaque. Dolorum blanditiis eius numquam, praesentium provident aperiam et minima nobis repellendus est modi totam quod laudantium, quidem quisquam ipsum quas saepe enim aliquid aut vitae consequatur. Eum impedit suscipit voluptatem error veritatis nostrum nisi repellat non quos asperiores culpa velit qui labore ut sunt voluptatibus harum blanditiis voluptatum ratione, eligendi praesentium accusantium. Veniam deleniti tempora reiciendis, quisquam voluptatum non a odio. Facilis ex deserunt, repellat consectetur vero corporis exercitationem possimus quaerat excepturi recusandae, aliquam eaque perspiciatis. Corporis est minima rerum dolores aperiam aliquam modi atque quasi et!</p>
-        </div>
-        <div class="card-image-ceo">
-            <img src="/assets/black bots.png" alt="Card Image">
+        <h1 id="sm">Sunil Malik</h1>
+        <p>Our CEO</p>
+        <p>
+            Introducing Sunil Malik, the visionary leader and CEO of Ess Ess Malik Industries. Under Sunil Malik's astute leadership, Ess Ess Malik Industries has emerged as a prominent player in the global market as both an exporter and manufacturer. His strategic vision and relentless pursuit of quality have propelled the company to new heights, earning it a reputation for reliability and innovation.
+        </p>
+
+        <div class="quote--container">
+            <p class="quote">
+                We don't just create products&hellip;
+                We Create 
+                <span class="quote--highlight">Solutions</span>
+            </p>
+            <p class="quote--author">&ndash; Sunil Malik</p>
         </div>
     </div>
+    <div class="ceo-img">
+    </div>
+   
 </div>
 
 <!--footer starts-->
-<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-3-col-md-6">
-                <h3 style="font-size: 25px;">Address</h3>
-                <p><i style="margin-right: 10px;" class="fa fa-map-marker-alt me-3"></i>B-29 - 1016/1- B/1- A, Guru Nanak Colony,<br>
-                    Back Side Surjit Cinema, Industrial Area-C,<br>
-                    Dhandari Kalan<br>
-                    Ludhiana - 141010, Punjab, India</p>
-                <p><i style="margin-right: 10px;" class="fa fa-phone-alt me-3"></i>+(91)-9876910648 <br> +(91)-(161)-2512899</p>
-                <p><i style="margin-right: 10px;" class="fa fa-envelope me-3"></i>sunil.malik@essessmalik.com</p>
-                <div class="rights">
-                    &copy; <a class="border-bottom" style="color: white;" href="#">ESS ESS Malik Industries</a>, All Right Reserved.
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3-col-md-6">
-                <h4 style="font-size: 25px;"   class="text-light mb-4">Opening Hours</h4>
-                <h3 class="days">Monday - Friday:</h3>
-                <p class="mb-4">09.00 AM - 09.00 PM</p>
-                <h3 class="days">Saturday - Sunday:</h3>
-                <p class="mb-0">09.00 AM - 1.00 PM</p>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h2 style="color: #e1d9d9;"   class="text-light mb-4">Other Links</h2>
-                <a class="btn btn-link" href="">Services</a>
-                <a class="btn btn-link" href="">About</a>
-                <a class="btn btn-link" href="">Products</a>
-                <a class="btn btn-link" href="">Contact</a>
-                <a class="btn btn-link" href="">Enquiry</a>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-light mb-4">Newsletter</h4>
-                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                </div>
-            </div>
+<footer class="footer">
+    <div class="fcon1">
+        <h3>Address</h3>
+                    <p><i style="margin-right: 10px;" class="fa fa-map-marker-alt me-3"></i>B-29 - 1016/1- B/1- A, Guru Nanak Colony,<br>
+                        Back Side Surjit Cinema, Industrial Area-C,<br>
+                        Dhandari Kalan<br>
+                        Ludhiana - 141010, Punjab, India</p>
+                    <p><i style="margin-right: 10px;" class="fa fa-phone-alt me-3"></i>+(91)-9876910648 <br> +(91)-(161)-2512899</p>
+                    <p><i style="margin-right: 10px;" class="fa fa-envelope me-3"></i>sunil.malik@essessmalik.com</p>
+                    <div class="rights">
+                        &copy; <a class="border-bottom" style="color: white;" href="#">ESS ESS Malik Industries</a>, All Right Reserved.
+                    </div>
+    </div>
+    <div class="fcon2">
+            <h4 style="font-size: 25px;"   class="text-light mb-4">Opening Hours</h4>
+            <h3 class="days">Monday - Friday:</h3>
+            <p class="mb-4">09.00 AM - 09.00 PM</p>
+            <h3 class="days">Saturday - Sunday:</h3>
+            <p class="mb-0">09.00 AM - 1.00 PM</p>
         </div>
     </div>
-</div>
+    <div class="fcon3">
+            <h2 style="color: #e1d9d9;"   class="text-light mb-4">Other Links</h2>
+            <a class="btn btn-link" href="quality.html">Quality</a>
+            <a class="btn btn-link" href="about.html">About</a>
+            <a class="btn btn-link" href="trailer&towingparts.html">Products</a>
+            <a class="btn btn-link" href="contact.html">Contact</a>
+            <a class="btn btn-link" href="contact.html">Enquiry</a>
+    </div>
+    <div class="fcom4">
+        <img src="assets/footer.png" alt="" width="auto" height="130px">
+        <div class="cta">
+            <a href="https://drive.google.com/file/d/1EEqY7ZpEO2O6Z3NRLpdL3U2A21pL0Laa/view?usp=sharings" class="cta-button">ESS ESS MALIK NUT BOLT CATALOUGE </a> <br> <hr>
+            <a href="https://drive.google.com/file/d/1YBCgWljZLZoRcpat4WAlIbzrNHf_PGGv/view?usp=sharing" class="cta-button">ESS ESS MALIK TRACTOR PART CATALOUGE</a> 
+           
+        </div>
+
+    </div>
+</footer>
 <!-- Footer End -->
 
+<div class="end">
+    <h3> Copyrighted Work | Site Design and Development By <a href="https://www.linkedin.com/in/dev-kakkar-0a419329b/">@Devkakkar</a> </h3>
+</div>
 
 
 
 
 
+<script>hamburger = document.querySelector(".hamburger");
+    nav = document.querySelector("nav");
+    hamburger.onclick = function() {
+        nav.classList.toggle("active");
+    }</script>
     
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

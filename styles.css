@@ -1,8 +1,10 @@
 body {
     margin: 0;
     padding: 0; 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; 
     background-color: #FFFFFF;
+    overflow-x: hidden;
+ 
 }
 
 
@@ -17,37 +19,102 @@ body {
     padding: 1.5vw;
 }
 
-.navbar {
-    background-color:#fff;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
+.logo>img {
     width: 100%;
-    padding: 10px 0;
-    z-index: 1000;
-    box-shadow:  0 0 3px 3px rgba(0, 0, 0, 0.3);
-
 }
 
-.container {
+.one{
+    height: 7.8em;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: space-between;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 50px;
+    background: #fff;
+    box-shadow:  0 0 3px 3px rgba(0, 0, 0, 0.3);
+    
+    
 }
 
-.logo img{
-    height: 6.5vw;
-    width: 20vw;
-   
+header .header-left {
+    display: flex;
+    align-items: center;
+}
+
+header .header-left .logo {
+    height: 100px;
+    width: 304px;
+}
+
+header .header-left nav {
+    margin-left: 50px;
+}
+header .header-left nav ul {
+    display: flex;
+}
+
+nav .cta {
+    display: none;
+}
+header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+header .header-right .hamburger {
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+}
+header .header-right .hamburger div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #000000;
+}
+@media only screen and (max-width: 1000px) {
+    header {
+        padding: 0 20px;
+    }
+    header .header-right .hamburger {
+        display: block;
+    }
+    header .header-left nav {
+        margin: 0;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: #fff;
+        padding: 30px;
+        transition: 0.5s;
+        text-align: center;
+        z-index: -1;
+        box-shadow:  0 0 3px 3px rgba(0, 0, 0, 0.3)
+    }
+    header .header-left nav.active {
+        top: 7em;
+        z-index: 100;
+        padding-right: 0;
+        
+    }
+    header .header-left nav ul {
+        display: block;
+    }
+}
+@media only screen and (max-width: 500px) {
+    nav .cta {
+        display: block;
+        margin-top: 20px;
+    }
+    header .header-right .cta {
+        display: none;
+    }
 }
 
 .menu {
     list-style: none;
-    margin: 0;
+    margin: 0 auto ;
     padding: 0;
     display: flex;
     margin-left: 20vw;
@@ -62,7 +129,7 @@ body {
 }
 
 .menu a {
-    color: rgb(31,40,56);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 22px;
     transition: color 0.3s;
@@ -124,6 +191,47 @@ body {
     display: block;
 }
 
+@media screen and (min-width: 769px) {
+    .menu {
+        display: flex;
+    }
+
+   
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    .menu {
+        display: none;
+        text-align: center;
+        transition: opacity 0.3s ease;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: opacity 5s ease;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu a {
+        color: black;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        color: #ff9900;
+    }
+    
+
+}
+/
 
 
 /* Page header styles */
@@ -133,7 +241,6 @@ body {
     padding: 80px 0; /* Update this color to match your branding */
     width: 100%;
     height: 60vh;
-    background-image: url('/assets/bg\ header.jpg');
     opacity: 100%;
     background-size: cover;
     background-attachment: fixed;
@@ -160,7 +267,7 @@ body {
 
 
 .page-header {
-    margin-top: 7.8em;
+    /* margin-top: 7.8em; */
     text-align: right;
     padding: 0;
     width: 100%;
@@ -279,132 +386,27 @@ margin-bottom: 20px;
 
 }
 
-/*** Footer ***/
-.footer {
-    background-color:rgb(31,40,56);
-    background-size: cover;
-    width: 100%;
-}
 
-
-
-.footer .btn.btn-social:hover {
-    color: var(--primary);
-}
-
-.footer .btn.btn-link {
-    display: flex;
-    margin-bottom: 20px;
-    padding: 0;
-    text-align: right;
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
-}
-
-.footer .btn.btn-link:hover {
-    letter-spacing: 3px;
-    box-shadow: none;
-}
-
-.footer .copyright {
-    padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer .copyright a {
-    color: var(--light);
-}
-
-.footer .footer-menu a {
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .3);
-}
-
-
-.col-lg-3-col-md-6{
-    display: block;
-    color: #e1d9d9;
-    margin: 5px;
-}
-
-.rights{
-    margin-top: 5px;
-    padding: 0 0 10px 0;
-}
-
-
-.brand-card-container{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #f1f1f1;
-}
-.brand-card{
-    padding-top: 50px;
-    height: 170px;
-    width: 14.5vw;
-}
-
-.brand-card img:hover{
-    opacity: 0.6;
-}
 
 /* responsive */
 
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 0 10px;
-    }
+@media only screen and (max-width: 600px) {
 
-    .menu {
-        flex-direction: column;
-        text-align: center;
-        display: none; /* Hide the menu by default */
-    }
-
-    .menu.active {
-        display: block; /* Show the menu when active class is applied */
-    }
-
-    .toggle-menu {
-        display: block; /* Show the button when the menu is hidden */
-        background-color: #333; /* Background color for mobile menu */
-        padding: 20px;
-    }
-    /* Style for the mobile menu when it's active */
-    .toggle-menu {
-        background-color: transparent; /* Background color for mobile menu */
-        padding: 10px; /* Adjust the padding as needed */
-        color: white;
-        border-radius: 10px;
-        border: 2px solid white;
-    }
-
-    .toggle-menu li {
-        margin: 10px 0;
-    }
-
-    .toggle-menu a {
-        color: #fff; /* Text color for mobile menu items */
-        font-size: 18px; /* Adjust font size as needed */
-    }
-
+    
+    
     .page-content{
         max-width: 80vw;
     }
+    .section h1 {
+        margin-top: 0;
+        font-size: 27px;
+    }
+
+    .section h2{
+        text-decoration: underline;
+    }
+
+
 
     .brand-card-container{
         width: 100%;
@@ -419,7 +421,7 @@ margin-bottom: 20px;
     
     }
     .slide>a>h3{
-        font-size: 4vw;
+        font-size: 5vw;
         color: white;
         text-align: center;
     }
@@ -444,17 +446,77 @@ margin-bottom: 20px;
         font-size: 10px;
     }
     .page-header{
-        background-position: 60% center;
+        background-position: 40% 60%;
+        width: 100%;
+        height: 50vh;
     }
     
     .section p{
         font-size: 14px;
     }
+
+    .page-content-2>h1{
+        text-align: center;
+        font-size: 8vw;
+    }
+
+    .page2>.section>h1{
+        font-size: 40px;
+    }
+
     hr{
         display: none;
     }
 
+    #page3>.global_market>.g1>h4{
+        font-size: 16px;
+        width: 100%;
         
+    }
+
+    #page3>.global_market>.g1>.img{
+        width: 90%;
+        padding-left: 0;
+        height: 250px;
+    }
+
+    #page3>.global_market>.g1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #page3>.global_market>.g2{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #page3>.global_market>.g2>h4{
+        font-size: 16px;
+        width: 100%;
+        
+    }
+
+    #page3>.global_market>.g2>.img{
+        width: 100%;
+        height: 250px;
+
+    }
+
+    .slide .img{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .fcon3{
+        padding: 0 25vw;
+    }
+
+    .fcom4>.cta>hr{
+        display: flex;
+    }
+     
 
     
 }
@@ -463,12 +525,6 @@ margin-bottom: 20px;
     .menu {
         display: flex;
     }
-
-    .toggle-menu {
-        display: none;
-    }
-   
-    
 
 }
 
@@ -608,15 +664,104 @@ align-items: center;
 #slides a{
     text-decoration: none;
 }
-
-.page1{
-    background-image: url();
-}
+                                    
 
 .lastimg{
    background-color:rgb(31,40,56);
 }
 
+/*** Footer ***/
+.footer {
+    background-color:rgb(31,40,56);
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 2vw;
+    padding-bottom: 30px;
+}
+
+.fcon1{
+    color: #FFFFFF
+    
+}
+
+.fcon2{
+    color: #FFFFFF;
+}
+
+.fcon3{
+    display: inline;
+}
+
+.fcon2 p{
+    opacity: 0.7;
+}
+
+.footer .btn.btn-link {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: right;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 3px;
+    box-shadow: none;
+}
+
+.fcon1 h3{
+    font-size: 25px;  
+}
+
+.fcon4 img{
+    justify-content: center;
+    align-items: center;
+}
+
+
+.brand-card-container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f1f1f1;
+}
+.brand-card{
+    padding-top: 50px;
+    height: 170px;
+    width: 250px;
+}
+
+.brand-card img:hover{
+    opacity: 0.6;
+}
+
+
+.end>h3{
+    padding: 10px 0;
+    margin: 0;
+    background-color: #333333;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.end a{
+    text-decoration: none;
+    color: yellow   ;
+}
 
 
 
