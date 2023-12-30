@@ -31,6 +31,7 @@ body {
     padding: 0 50px;
     background: #fff;
     box-shadow:  0 0 3px 3px rgba(0, 0, 0, 0.3);
+    z-index: 100;
     
     
 }
@@ -75,6 +76,21 @@ header .header-right .hamburger div {
     header {
         padding: 0 20px;
     }
+
+    .one{
+        z-index: -100;
+        
+    }
+
+    .brand-card img{
+        padding-top: 0;
+        height: 80px;
+        width: 120px;
+    }
+    .brand-card{
+        padding-top: 0;
+    }
+
     header .header-right .hamburger {
         display: block;
     }
@@ -95,7 +111,8 @@ header .header-right .hamburger div {
     header .header-left nav.active {
         top: 7em;
         z-index: 100;
-        padding-right: 0;
+        padding: 20px 0;
+        box-shadow: none;
         
     }
     header .header-left nav ul {
@@ -680,6 +697,8 @@ align-items: center;
     justify-content: space-evenly;
     padding: 0 2vw;
     padding-bottom: 30px;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .fcon1{
